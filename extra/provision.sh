@@ -295,12 +295,6 @@ fi
             package python-all-dev
             package python-setuptools
             package python-pip
-            log "Upgrading pip"
-            sudo -H pip install --upgrade pip
-            log "Installing pip - mycli"
-            sudo -H pip install mycli
-            package emacs
-            package htop
         fi
 
         package ca-certificates
@@ -320,7 +314,7 @@ fi
 
         log "Installing unison 2.48.3. Remember to install the same version on your host machine"
         package xz-utils
-        install_unison
+        package unison
     fi
 
     log "Creating attachments folder, and setting ownership to www-data"
